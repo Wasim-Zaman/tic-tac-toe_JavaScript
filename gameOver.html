@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameOver</title>
+
+    <style>
+        *{
+            text-align: center;
+        }
+        body{
+            background-color: black;
+        }
+        button{
+            padding: 20px 30px;
+            border-radius: 10px;
+            font-size: 40px;
+            background-color: rgb(251, 89, 170);
+            color: white;
+            font-family: fantasy;
+        }
+        img{
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <img src="images/gameover.jpg">
+        <br>
+        <button onclick="restart()">Play Again</button>
+    </div>
+
+    <script>
+        function restart()
+        {
+            window.location = "hangman.html";
+        }
+        
+    </script>
+</body>
+</html>

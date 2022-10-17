@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        body{
+            background-image: url("images/bg.jpg");
+            color: rgb(0, 0, 0);
+        }
+        
+        article.forblanks{
+            font-size: 30px;
+            word-spacing: 50px;
+        }
+
+        .alpha:nth-child(even){
+            color: white;
+            background-color: rgb(0, 0, 0);
+            padding: 0px 8px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        .alpha:nth-child(odd){
+            padding: 0px 8px;
+            color: black;
+            background-color: rgb(255, 255, 255);
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        .btnsection{
+            word-spacing: 10px;
+            line-height: 2.5;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        #pic{
+            width: 200px;
+            height: 280px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <img id="pic">
+        <b><h2 id="guess"></h2></b>
+        <h4 id="chance"></h4>
+    </section>
+    <article class="forblanks">
+        <p id="cityblanks"></p>
+    </article>
+
+    <section class="btnsection">
+        <button type="button" value="Q" disabled class="alpha" onclick="clickHandler(this)" >Q</button>
+        <button type="button" value="W" disabled class="alpha" onclick="clickHandler(this)" >W</button>
+        <button type="button" value="E" disabled class="alpha" onclick="clickHandler(this)" >E</button>
+        <button type="button" value="R" disabled class="alpha" onclick="clickHandler(this)" >R</button>
+        <button type="button" value="T" disabled class="alpha" onclick="clickHandler(this)" >T</button>
+        <button type="button" value="Y" disabled class="alpha" onclick="clickHandler(this)" >Y</button>
+        <button type="button" value="U" disabled class="alpha" onclick="clickHandler(this)" >U</button>
+        <button type="button" value="I" disabled class="alpha" onclick="clickHandler(this)" >I</button>
+        <button type="button" value="O" disabled class="alpha" onclick="clickHandler(this)" >O</button>
+        <button type="button" value="P" disabled class="alpha" onclick="clickHandler(this)" >P</button><br>
+        <button type="button" value="A" disabled class="alpha" onclick="clickHandler(this)" >A</button>
+        <button type="button" value="S" disabled class="alpha" onclick="clickHandler(this)" >S</button>
+        <button type="button" value="D" disabled class="alpha" onclick="clickHandler(this)" >D</button>
+        <button type="button" value="F" disabled class="alpha" onclick="clickHandler(this)" >F</button>
+        <button type="button" value="G" disabled class="alpha" onclick="clickHandler(this)" >G</button>
+        <button type="button" value="H" disabled class="alpha" onclick="clickHandler(this)" >H</button>
+        <button type="button" value="J" disabled class="alpha" onclick="clickHandler(this)" >J</button>
+        <button type="button" value="K" disabled class="alpha" onclick="clickHandler(this)" >K</button>
+        <button type="button" value="L" disabled class="alpha" onclick="clickHandler(this)" >L</button><br>
+        <button type="button" value="Z" disabled class="alpha" onclick="clickHandler(this)" >Z</button>
+        <button type="button" value="X" disabled class="alpha" onclick="clickHandler(this)" >X</button>
+        <button type="button" value="C" disabled class="alpha" onclick="clickHandler(this)" >C</button>
+        <button type="button" value="V" disabled class="alpha" onclick="clickHandler(this)" >V</button>
+        <button type="button" value="B" disabled class="alpha" onclick="clickHandler(this)" >B</button>
+        <button type="button" value="N" disabled class="alpha" onclick="clickHandler(this)" >N</button>
+        <button type="button" value="M" disabled class="alpha" onclick="clickHandler(this)" >M</button>
+    </section>
+    <section class="sthint">
+        <h3 id="playInst">Press Play Button To Start the game</h3>
+        <button type="button" onclick="play()" id="playbtn" style="background-color: rgb(0, 0, 0); color: white; border-radius: 20px; padding: 20px 10px; font-size: large; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Play Game</button>
+        
+    </section>
+
+
+
+    <script src="hangman.js">
+    </script>
+</body>
+</html>
